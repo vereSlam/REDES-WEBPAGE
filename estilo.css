@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+
+header, section, article, nav, footer, aside, figure, form{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+p, h1, h2,h3, h4{
+    color: white;
+    margin: 6px;
+}
+h1{font-size: 24px;}
+h2{font-size: 20px;}
+h3{font-size: 18px;}
+h4{font-size: 16px;}
+p{font-size: 14px;}
+a{
+    text-decoration: none;
+}
+a img{
+    padding: 0 10px;
+    border: none;
+}
+ul, ol{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #555555;
+}
+#scrollUp{
+    width: 60px;
+    height: 60px;
+    bottom: 10px;
+    right: 10px;
+    /* background-image: ; */
+}
+/* -------------------HEADER------------------------ */
+header{
+    background-color: #000000;
+}
+#cajacabecera{
+    width: 100%;
+}
+#cabecera{
+    width: 100%;
+    max-height: 1100px;
+    display: flex;
+    margin: auto;
+/*     background-color: transparent; */
+    background-color: #0000004b;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+#menu-inferior{
+    width: 100%;
+    max-height: 1100px;
+    display: flex;
+    margin: auto;
+    /* background: #254580; */
+    background: #67254E;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+#logo{
+    width: 20%;
+    padding: 6px 0;
+}
+/* -------------------IMAGEN HEADER------------------------ */
+.nube{
+    width: 100%;
+    max-height: 400px;
+    padding: 0px;
+}
+img{
+    height: 300px;
+}
+.img{
+    position: relative;
+}
+
+/* -------------------MENU------------------------ */
+
+.menu{
+    width: 80%;
+}
+/* #btn-menu{
+    display: none;
+}
+#mmovil{
+    font-size: 25px;
+    cursor: pointer;
+    text-align: left;
+    color: white;
+    display: none;
+} */
+.menu ul{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu a{
+    display: block;
+    line-height: 60px;
+    padding: 0px 30px;
+    color: white;
+    font-size: 20px;
+}
+.menu a i{
+    font-size: 20px;
+    padding: 0 9px;
+}
+.menu a:hover{
+    color: #000000;
+    border-bottom: 2px solid #f2f2f2;
+    background-color: #CD9FA3;
+}
+
+/* -------------------MENU INFERIOR------------------------ */
+
+.menu-inferior{
+    width: 80%;
+}
+/* #btn-menu{
+    display: none;
+}
+#mmovil{
+    font-size: 25px;
+    cursor: pointer;
+    text-align: left;
+    color: white;
+    display: none;
+} */
+.menu-inferior ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu-inferior a{
+    display: block;
+    line-height: 50px;
+    padding: 0 30px;
+    color: white;
+    font-size: 15px;
+}
+.menu-inferior a:hover{
+    color: #fff;
+    border-bottom: 0px solid #f2f2f2;
+    background-color: #000000;
+}
+/* -------------------BIENVENIDA CUADRO------------------------ */
+main{
+    background: linear-gradient(to bottom left, #000000, #000000, #110C3B);
+    padding: 1px 0px;
+    display: flex;
+    padding: 50px 50px 0px 0px;
+}
+.templ{
+    position: relative;
+    width: 850px;
+    height: 350px;
+    background: #000000;
+    border-radius: 50px 50px;
+    overflow: hidden;
+}
+.templ::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 670px;
+    height: 450px;
+    background: linear-gradient(60deg,transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.templ::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 670px;
+    height: 450px;
+    background: linear-gradient(60deg,transparent, #d9138a, #d9138a);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.templ > div{
+    position: absolute;
+    inset: 2px;
+    border-radius: 50px 50px;
+    background: #000000;
+    z-index: 10;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+/* ------ */
+div .tmpl2{
+    padding: 60px;
+}
+.templ .text1{
+    font-size: 60px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+.templ .ptext1{
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+    text-align: center;
+}
+.templ span{
+    font-family: Arial;
+}
+.ptext1 li{
+    position: relative;
+    top: 0;
+    font-size: 60px;
+    color: #CD9FA3;
+    list-style: none;
+    padding: 0 20px;
+    text-shadow: 0 0 10px #CD9FA3;
+    animation: slide 12s steps(4) infinite, colorful 6s infinite;
+}
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+@keyframes colorful{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.ptext1 li span{
+    position: relative;
+}
+.ptext1 li span::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 400px;
+    height: 90px;
+    background: #000000; 
+    border-left: 2px solid #CD9FA3;
+    animation: typing 1.5s steps(5) infinite alternate;
+}
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+
+    }
+}
+/* -------------------SECCIONES------------------------ */
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+aside{
+    background-color: #28292d;
+    margin: 30px 25px;
+    padding: 30px;
+    width: 380px;
+    height: 300px;
+    border-radius: 20%;
+    text-align: right;
+}
+p{
+    text-align: justify;
+    font-family: sans-serif;
+    font-size: 17px;
+    display: block;
+}
+.txt{
+    display: flex;
+}
+/* .mas{
+    max-height: 1000px;
+    position: relative;
+    padding-top: 100px;
+} */
+.psecciones{
+    max-height: 2000px;
+}
+aside > h2{
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+}
+aside > h4{
+    text-align: left;
+    font-family: Arial;
+    font-style: italic;
+    font-size: 13px;
+    color: #b8b8b8;
+}
+aside a{
+    text-align: justify;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(173, 171, 171);
+    text-decoration-line: underline;
+}
+.txt a:hover{
+    color: #fff;
+    border-bottom: 0px solid #4379df;
+    color: #4379df;
+}
+
+/* ---------------SECCION ANIMACION----------------------- */
+
+.psecciones aside{
+    opacity: 0;
+    transform: scale(0.9);
+    transition: .7s ease-in-out all;
+}
+.psecciones aside.visible{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ---------------PIE DE PAGINA----------------------- */
+#piepagina{
+    background: #67254E;
+    padding: 2% 0;
+}
+h3{
+    text-align: center;
+    font-family: Arial;
+    font-size: 13px;
+}
+/*.cajapie{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+} 
+#piepagina p{
+    text-align: left;
+    color: #ffffff;
+    font-size: 30px;
+}
+#piepagina ul{
+    width: 160px;
+    margin: 0 auto;
+    padding: 0 0 0 100px;
+    display: flex;
+    list-style: none;
+}
+#piepagina ul li{
+    padding: 0 14px;
+}
+#piepagina ul li a{
+    width: 4opx;
+    height: 40px;
+    display: block;
+    line-height: 40px;
+    color: white;
+    text-align: right;
+    font-size: 35px;
+} */
