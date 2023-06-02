@@ -92,15 +92,21 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
+    height: 260px;
 }
 .sn{
     max-height: 2000px;
+    margin: 100px;
+ 
+}
+.frase{
+    font-style: italic;
+    margin: 30px;
 }
 p{
     text-align: justify;
     font-family: sans-serif;
     font-size: 17px;
-    display: block;
 }
 /* -------------------MENU------------------------ */
 
