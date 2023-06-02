@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="imagenes/Logo.PNG">
     <link rel="stylesheet" href="estilo.css">
-    <title>DNS</title>
-    <link rel="stylesheet" href="css/media.css">
+    <title>INICIO</title>
+    <link rel="stylesheet" href="media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -16,6 +16,8 @@
     <header id="cajacabecera">
         <!-- ***************** MENU SUPERIOR ********************** -->
         <div id="cabecera">
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu" id="mmovil"><i class="fa-sharp fa-solid fa-list-ul"></i></label>  
             <nav class="menu">
                 <ul>
                     <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
@@ -28,10 +30,12 @@
         <div class="img">
             <img src="imagenes/redes.jpg"  alt="Imagen de Freepik" class="nube">
         </div> 
-        <div id="menu-inferior">
+        <div id="menum-inferior">
+            <input type="checkbox" id="btn-menu-inferior">
+            <label for="btn-menu-inferior" id="mmovill"><i class="fa-solid fa-ellipsis-vertical"></i></label>  
             <nav class="menu-inferior">
                 <ul>
-                    <a href="paginas/dns.html">DNS</a>
+                    <a class="active" href="paginas/dns.html">DNS</a>
                     <a href="paginas/dominios.html">DOMINIOS</a>
                     <a href="paginas/microsoftAzure.html">MICROSOFT AZURE</a>
                     <a href="paginas/servidores.html">SERVIDORES</a>

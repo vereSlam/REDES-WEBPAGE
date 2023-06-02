@@ -8,6 +8,7 @@ header, section, article, nav, footer, aside, figure, form{
 }
 body{
     margin: 0;
+    display: block;
 }
 *{
     box-sizing: border-box;
@@ -82,11 +83,25 @@ header{
     padding: 6px 0;
 }
 /* -------------------SECCIONES------------------------ */
+.menu{
+    width: 80%;
+}
+#btn-menu{
+    display: none;
+}
+#mmovil{
+    font-size: 25px;
+    cursor: pointer;
+    text-align: left;
+    color: white;
+    display: none;
+    padding: 10px 20px;
+} 
 main{
     background: linear-gradient(to bottom left, #000000, #000000, #110C3B);
     padding: 1px 0px;
     display: flex;
-    padding: 50px 50px 0px 0px;
+    padding: 118px 50px 0px 0px;
 }
 section{
     display: flex;

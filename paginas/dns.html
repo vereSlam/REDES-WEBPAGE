@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="imagenes/Logo.PNG">
     <link rel="stylesheet" href="../estilos/style.css">
     <title>InfoDigital - DNS</title>
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="../estilos/mediaPag.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -16,6 +16,8 @@
     <header id="cajacabecera">
         <!-- ***************** MENU SUPERIOR ********************** -->
         <div id="cabecera">
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu" id="mmovil"><i class="fa-sharp fa-solid fa-list-ul"></i></label>  
             <nav class="menu">
                 <ul>
                     <li><a href="../index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
@@ -28,7 +30,9 @@
         <div class="img">
             <img src="../imagenes/redes.jpg"  alt="Imagen de Freepik" class="nube">
         </div> 
-         <div id="menu-inferior">
+         <div id="menum-inferior">
+            <input type="checkbox" id="btn-menu-inferior">
+            <label for="btn-menu-inferior" id="mmovill"><i class="fa-solid fa-ellipsis-vertical"></i></label>  
             <nav class="menu-inferior">
                 <ul>
                     <a href="dns.html">DNS</a>
@@ -51,14 +55,26 @@
                 <li><a href="#p-historia">Historia</a></li>
               </ul>
             </li>
-            <li><a href="dominios.html">DOMINIOS</a></li>
+            <li><a href="dominios.html">DOMINIOS</a>
+                <ul>
+                    <li><a href="dominios.html">¿Que es un Dominio?</a></li>
+                    <li><a href="dominios.html">La importancia de Dominios</a></li>
+                </ul>
+            </li>
             <li><a href="microsoftAzure.html">MICROSOFT AZURE</a></li>
             <li><a href="servidores.html">SERVIDORES</a>
                 <ul>
-                    <li><a href="#p-infoservidor">Informacion servidores</a></li>
+                    <li><a href="servidores.html">Informacion servidores</a></li>
                 </ul>
             </li>
-            <li><a href="dhcp.html">DHCP</a></li>
+            <li><a href="dhcp.html">DHCP</a>
+                <ul>
+                    <li><a href="dhcp.html">¿Qué es el DHCP?</a></li>
+                    <li><a href="dhcp.html">¿Cuándo utilizar un DHCP?</a></li>
+                    <li><a href="dhcp.html">Ventajas y desventajas de utilizar DHCP</a></li>
+                    <li><a href="dhcp.html">Mecanismos para asignar direcciones IP por DHCP</a></li>
+                  </ul>
+            </li>
         </ul>
     </aside>
 <!-- ********************** CONTENIDO DNS******************************************** -->
@@ -128,9 +144,40 @@
         </p>
     </section>
    
-    <!-- ********************** MAS INFORMACION******************************************** -->
+    <!-- ********************** CONTENDIDO SIMILAR******************************************** -->
     <section class="mas" id="p-mas">
-        <h2>MÁS INFORMACIÓN</h2>
+        <h2>CONTENIDO SIMILAR</h2>
+        <div class="p-mas">
+            <aside id="cuad2">
+                <h2>¿Qué son los dominios?</h2>
+              <div>
+                <!-- <img src="" alt=""> -->
+              </div>
+            <a href="dominios.html">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </aside>
+            <aside id="cuad3">
+                <h2>Microsoft Azure lo nuevo</h2>
+             <div>
+                <!-- <img src="" alt=""> -->
+              </div>
+              <a href="microsoftAzure.html">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </aside>
+            <aside id="cuad4">
+                <h2>Tipos de servidores</h2>
+                <div>
+                <!-- <img src="" alt=""> -->
+                </div>
+                <a href="servidores.html">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </aside>
+            <aside id="cuad5">
+                <h2>¿Qué es DHCP?</h2>
+                <div>
+                    <!-- <img src="" alt=""> -->
+                </div>
+                <a href="dhcp.html">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>   
+                 </div>
+             </aside>
+        </div>
     </section>
 </aside>
  </main>

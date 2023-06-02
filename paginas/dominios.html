@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="imagenes/Logo.PNG">
     <link rel="stylesheet" href="../estilos/style.css">
     <title>InfoDigital - Dominios</title>
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="../estilos/mediaPag.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -16,6 +16,8 @@
     <header id="cajacabecera">
         <!-- ***************** MENU SUPERIOR ********************** -->
         <div id="cabecera">
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu" id="mmovil"><i class="fa-sharp fa-solid fa-list-ul"></i></label>  
             <nav class="menu">
                 <ul>
                     <li><a href="../index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
@@ -28,7 +30,9 @@
         <div class="img">
             <img src="../imagenes/redes.jpg"  alt="Imagen de Freepik" class="nube">
         </div> 
-         <div id="menu-inferior">
+         <div id="menum-inferior">
+            <input type="checkbox" id="btn-menu-inferior">
+            <label for="btn-menu-inferior" id="mmovill"><i class="fa-solid fa-ellipsis-vertical"></i></label>  
             <nav class="menu-inferior">
                 <ul>
                     <a href="dns.html">DNS</a>
@@ -51,27 +55,96 @@
                 <li><a href="dns.html">Historia</a></li>
               </ul>
             </li>
-            <li><a href="dominios.html">DOMINIOS</a></li>
+            <li><a href="dominios.html">DOMINIOS</a>
+                <ul>
+                    <li><a href="#p-QueesunDominio">¿Que es un Dominio?</a></li>
+                    <li><a href="#p-Importante">La importancia de Dominios</a></li>
+                </ul>
+            </li>
             <li><a href="microsoftAzure.html">MICROSOFT AZURE</a></li>
             <li><a href="servidores.html">SERVIDORES</a>
                 <ul>
                     <li><a href="servidores.html">Informacion servidores</a></li>
                 </ul>
             </li>
-            <li><a href="dhcp.html">DHCP</a></li>
+            <li><a href="dhcp.html">DHCP</a>
+                <ul>
+                    <li><a href="dhcp.html">¿Qué es el DHCP?</a></li>
+                    <li><a href="dhcp.html">¿Cuándo utilizar un DHCP?</a></li>
+                    <li><a href="dhcp.html">Ventajas y desventajas de utilizar DHCP</a></li>
+                    <li><a href="dhcp.html">Mecanismos para asignar direcciones IP por DHCP</a></li>
+                  </ul>
+            </li>
         </ul>
     </aside>
 <!-- ********************** CONTENIDO DOMINIOS******************************************** -->
 <aside id="secciones">
     <section class="dominios" id="p-dominios">
-        <h2>DOMINIOS</h2>
+        <h2 id="p-QueesunDominio">DOMINIOS</h2>
         <p> 
-            
+            Un dominio es un nombre único e inequívoco a nivel mundial para una región de Internet delimitada de forma lógica como,
+            por ejemplo, una página web. Los usuarios de Internet ven los dominios de la siguiente forma:
+            <br> <br>
+            www.example.com
+            <br> <br>
+            El dominio, como parte fundamental de un Uniform Resource Locator (URL), señala dónde puede ser encontrado un recurso
+            dentro del sistema jerárquico de nombres de dominio Domain Name System (DNS). La traducción de los nombres de dominio en
+            direcciones IP se realiza a través de los llamados Nameserver, servidores especializados responsables de la asignación
+            de nombres a las direcciones IP. Este servicio funciona de manera similar a un servicio de información telefónica: un
+            usuario escribe el dominio www.example.com en el campo de búsqueda de su navegador web y este envía la solicitud al
+            Nameserver correspondiente.
+    
         </p>
+        <h2 id="p-Importante">La importancia de Dominios son</h2>
+        <p>
+            Registrar un dominio en Internet es el primer paso para tener presencia en la web. Sin embargo, con solo un dominio no
+            podrás publicar tu sitio web, ya que también necesitarás un web hosting.
+            Es importante recalcar que con la elección y registro de tu dominio en Internet podrás crear cuentas de correos
+            personalizados que te permitirán proyectar profesionalismo y ganarte la confianza de los clientes potenciales.
+            Otro de los puntos importantes de los dominios en Internet es que son términos memorizables y fáciles de recordar por
+            los internautas, porque ¿no te parece que es más sencillo recordar google.com que su dirección IP
+            <br> <br>
+            Por último, los nombres de un dominio en Internet son personalizables, así que suelen reflejar la naturaleza del sitio
+            web, es decir, si buscas a la compañía Hubspot, solo debes escribir su nombre y su sitio web aparecerá de primero con el
+            dominio de hubspot.es en los buscadores web.
+            Recuerda que será mucho más sencillo encontrarte si eliges un dominio que va acorde a lo que ofreces o quién eres.
+            Ahora bien, en este punto quizá confundas lo que es un dominio en internet con una URL.
+    </p>
     </section>
-     <!-- ********************** MAS INFORMACION******************************************** -->
-     <section class="mas" id="p-mas">
-        <h2>MÁS INFORMACIÓN</h2>
+    <!-- ********************** CONTENDIDO SIMILAR******************************************** -->
+    <section class="mas" id="p-mas">
+        <h2>CONTENIDO SIMILAR</h2>
+        <div class="p-mas">
+            <aside id="cuad1">
+                <h2>¿Qué son los DNS?</h2>
+              <div>
+                <!-- <img src="" alt=""> -->
+              </div>
+            <a href="dns.html">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </aside>
+            <aside id="cuad3">
+                <h2>Microsoft Azure lo nuevo</h2>
+             <div>
+                <!-- <img src="" alt=""> -->
+              </div>
+              <a href="microsoftAzure.html">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </aside>
+            <aside id="cuad4">
+                <h2>Tipos de servidores</h2>
+                <div>
+                <!-- <img src="" alt=""> -->
+                </div>
+                <a href="servidores.html">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </aside>
+            <aside id="cuad5">
+                <h2>¿Qué es DHCP?</h2>
+                <div>
+                    <!-- <img src="" alt=""> -->
+                </div>
+                <a href="dhcp.html">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>   
+                 </div>
+             </aside>
+        </div>
     </section>
 </aside>
  </main>

@@ -1,0 +1,164 @@
+/*  ------------------------------------------------------------
+ -----------------ESTILO PARA 1024---------------------------
+ ------------------------------------------------------------ */
+ @media only screen and (max-width: 1024px){
+
+ }
+ /*  ------------------------------------------------------------
+  -----------------ESTILO PARA 920---------------------------
+  ------------------------------------------------------------ */
+ @media only screen and (max-width: 920px){
+  
+    #cabecera{
+        height: 50px;
+    }
+    #logo{
+         width: 100%;
+     }
+    #logo img{
+        display: block;
+        margin: auto;
+     }
+ /* ---------------------------MENU------------------------------------- */
+   .menu{
+        position: absolute;
+        width: 300px; 
+        top: 100%;
+        transform: translateX(-100%);
+     }
+    #mmovil {
+        display: block;
+     }
+     #mmovil i{
+        text-align: right;
+     }
+    .menu ul{
+         flex-direction: column;
+         background: #333233;
+     }
+     img{
+        height: 200px;
+    }
+    .menu a{
+         line-height: 30px;
+         padding: 10px 20px;
+         border-bottom: 1px solid rgb(63, 62, 62);
+         text-transform: uppercase;
+         font-size: 15px;
+     } 
+    .menu a i{
+        padding: 0px;
+        font-size: 0px;
+        } 
+    #btn-menu:checked ~ .menu{
+        display: initial;
+         transform: translateX(0%); 
+         transition: all 0.6s; 
+     }
+     .menu a:hover{
+        color: #000000;
+        border-bottom: 0px solid #f2f2f2;
+        background-color: #CD9FA3;
+    }
+
+ /* ---------------------------MENU INFERIOR------------------------------------- */
+   .menu-inferior{
+    position: absolute;
+     width: 85%; 
+     top: 50px;
+     transform: translateX(-100%);
+     margin: 0px 0px 0px 0px;
+ } 
+ #mmovill {
+    display: block;
+ }
+ #mmovill i{
+    text-align: right;
+ }
+ .menu-inferior ul{
+    flex-direction: column;
+    background: #333233;
+}
+.menu-inferior a{
+     line-height: 30px;
+     padding: 2px 10px;
+     border-bottom: 1px solid rgb(63, 62, 62);
+     text-transform: uppercase;
+     font-size: 15px;
+ }  
+.menu-inferior a i{
+    padding: 0px;
+    font-size: 0px;
+    }  
+#btn-menu-inferior:checked ~ .menu-inferior{
+   
+    transform: translateX(0%); 
+    transition: all 0.6s; 
+ }  
+ .menu-inferior a:hover{
+    color: #000000;
+    border-bottom: 0px solid #f2f2f2;
+    background-color: #CD9FA3;
+} 
+    /* -------------------BIENVENIDA CUADRO------------------------ */
+    .templ{
+        width: 310px;
+        height: 246px;
+    }
+    .templ::before{
+        width: 470px;
+        height: 250px;
+    }
+    .templ::after{
+        width: 470px;
+        height: 250px;
+    }
+    .templ .text1{
+        font-size: 20px;
+    }
+    .ptext1 li{
+        font-size: 20px;
+    } 
+
+/* -------------------SECCIONES------------------------ */
+.psecciones{
+    justify-content: center;
+}
+    aside{
+        background-color: #28292d;
+        margin: 20px 25px;
+        padding: 10px;
+        width: 250px;
+        height: 250px;
+        border-radius: 20%;
+        text-align: right;
+    }
+    p{
+        text-align: justify;
+        font-family: sans-serif;
+        font-size: 13px;
+        display: block;
+    }
+    aside > h2{
+        font-size: 14px;
+    }
+    aside > h4{
+        font-size: 10px;
+    }
+    aside a{
+        font-size: 13px;
+    }
+  } 
+
+  /*  ------------------------------------------------------------
+  -----------------ESTILO PARA 603---------------------------
+  ------------------------------------------------------------ */
+  @media only screen and (max-width: 603px){
+ 
+ }
+ /*  ------------------------------------------------------------
+  -----------------ESTILO PARA 533---------------------------
+  ------------------------------------------------------------ */
+  @media only screen and (max-width: 533px){
+ 
+}
