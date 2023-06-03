@@ -103,7 +103,7 @@ img{
     text-align: left;
     color: white;
     display: none;
-    padding: 10px 20px;
+    padding: 20px 20px;
 } 
 .menu ul{
     display: flex;
@@ -130,9 +130,12 @@ img{
 }
 
 /* -------------------MENU INFERIOR------------------------ */
-
+#menum-inferior{
+    position: absolute;
+    margin: 230px 0px 0px 0px;
+}
 .menu-inferior{
-    width: 100%;
+    width: 80%;
 }
 #btn-menu-inferior{
     display: none;
@@ -143,7 +146,7 @@ img{
     text-align: right;
     color: white;
     display: none;
-    margin: 0px 0px 0px 460px;
+    margin: 10px;
 }
 .menu-inferior ul{
     display: flex;
@@ -169,14 +172,13 @@ main{
     background: linear-gradient(to bottom left, #000000, #000000, #110C3B);
     padding: 1px 0px;
     display: flex;
-    padding: 50px 50px 0px 0px;
+   
 }
 .templ{
     position: relative;
-    width: 850px;
-    height: 350px;
+    width: 1365px;
+    height: 230px;
     background: #000000;
-    border-radius: 50px 50px;
     overflow: hidden;
 }
 .templ::before{
@@ -184,7 +186,7 @@ main{
     position: absolute;
     top: -50%;
     left: -50%;
-    width: 670px;
+    width: 1070px;
     height: 450px;
     background: linear-gradient(60deg,transparent, #45f3ff, #45f3ff);
     transform-origin: bottom right;
@@ -213,7 +215,6 @@ main{
 .templ > div{
     position: absolute;
     inset: 2px;
-    border-radius: 50px 50px;
     background: #000000;
     z-index: 10;
     padding: 30px 30px;
@@ -222,12 +223,12 @@ main{
 }
 /* ------ */
 div .tmpl2{
-    padding: 60px;
+    padding: 40px;
 }
 .templ .text1{
-    font-size: 60px;
+    font-size: 50px;
     color: #fff;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
 }
 .templ .ptext1{
@@ -289,7 +290,7 @@ section{
     justify-content: start;
 }
 aside{
-    background-color: #28292d;
+    background-color: #1f2747;
     margin: 30px 25px;
     padding: 30px;
     width: 380px;
@@ -313,6 +314,7 @@ p{
 } */
 .psecciones{
     max-height: 2000px;
+    margin-top: 90px;
 }
 aside > h2{
     text-align: center;

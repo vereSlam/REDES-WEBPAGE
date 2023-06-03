@@ -12,6 +12,9 @@
     #cabecera{
         height: 50px;
     }
+    body{
+        background: black;
+    }
     #logo{
          width: 100%;
      }
@@ -102,45 +105,35 @@
 } 
     /* -------------------BIENVENIDA CUADRO------------------------ */
     .templ{
-        width: 310px;
-        height: 246px;
-    }
-    .templ::before{
-        width: 470px;
-        height: 250px;
-    }
-    .templ::after{
-        width: 470px;
-        height: 250px;
+       /*  width: 375px;
+        height: 225px;
+        margin: 6px 10px; */
+        width: 100%;
     }
     .templ .text1{
-        font-size: 20px;
+        font-size: 35px;
+        padding: 0;
     }
     .ptext1 li{
-        font-size: 20px;
-    } 
+        font-size: 40px;
+    }  
 
 /* -------------------SECCIONES------------------------ */
 .psecciones{
     justify-content: center;
 }
     aside{
-        background-color: #28292d;
         margin: 20px 25px;
         padding: 10px;
-        width: 250px;
+        width: 340px;
         height: 250px;
-        border-radius: 20%;
-        text-align: right;
+        border-radius: 10%;
     }
     p{
-        text-align: justify;
-        font-family: sans-serif;
-        font-size: 13px;
-        display: block;
+        font-size: 16px;
     }
     aside > h2{
-        font-size: 14px;
+        font-size: 19px;
     }
     aside > h4{
         font-size: 10px;

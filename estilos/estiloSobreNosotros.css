@@ -84,7 +84,7 @@ header{
 }
 /* -------------------SECCIONES------------------------ */
 .menu{
-    width: 80%;
+    width: 100%;
 }
 #btn-menu{
     display: none;
@@ -99,29 +99,28 @@ header{
 } 
 main{
     background: linear-gradient(to bottom left, #000000, #000000, #110C3B);
-    padding: 1px 0px;
     display: flex;
-    padding: 118px 50px 0px 0px;
 }
 section{
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    height: 260px;
+    height: 740px;
 }
-.sn{
-    max-height: 2000px;
-    margin: 100px;
- 
+.sn {
+    margin: 0px;
+    padding: 20px;
 }
 .frase{
     font-style: italic;
-    margin: 30px;
+    padding: 60px 0px;
 }
-p{
+.parrafo{
     text-align: justify;
     font-family: sans-serif;
-    font-size: 17px;
+    font-size: 19px;
+    margin: 0px 20px;
+    margin: 0px 0px 400px 0px;
 }
 /* -------------------MENU------------------------ */
 
