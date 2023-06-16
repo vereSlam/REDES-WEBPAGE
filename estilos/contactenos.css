@@ -1,0 +1,50 @@
+
+.formulario{
+    padding: 8% 27%;
+    display: block;
+}
+form{
+    width: 100%;
+    padding: 8%;
+    background: rgb(17, 17, 43);
+}
+form p{
+    font-size: 30px;
+    text-align: center;
+}
+/* label{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+input, textarea{
+    font-size: 100%;
+    width: 98%;
+    padding-left: 10px;
+    background: rgb(17, 17, 43);
+    border-style:solid;
+    border-width: 1px;
+    border-radius: 20px;
+    color: white;
+    border-color: rgb(13, 13, 116);
+}
+.alinear{
+    background: rgb(56, 56, 151);
+}
+.espacio{
+    margin: 3% 0;
+    font-size: 25px;
+    justify-content: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 920px){
+    .formulario{
+        padding: 8% 10%;
+    }
+    input, textarea{
+        font-size: 80%;
+    }
+    .espacio{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,248 @@
+<?php
+session_start();
+$hora = date('H:i');
+$session_id = session_id();
+$token = hash('sha256', $hora.$session_id);
+ 
+$_SESSION['token'] = $token;
+ 
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="info Digital" href="../logo/logo.png">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <title>InfoDigital - Microsoft Azure</title>
+    <link rel="stylesheet" href="../estilos/mediaPag.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   
+    <!-- ********************** CABECERA DE LA WEB ******************************************** -->
+    <header id="cajacabecera">
+        <!-- ***************** MENU SUPERIOR ********************** -->
+        <div id="cabecera">
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu" id="mmovil"><i class="fa-sharp fa-solid fa-list-ul"></i></label>  
+            <nav class="menu">
+                <ul>
+                    <li><a href="../index.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
+                    <li><a href="sobreNosotros.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-calendar-days"></i>Sobre Nosotros</a></li>
+                    <li><a href="contactenos.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-user"></i></i>Contactenos</a></li>
+                    <li><a href="mas.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-laptop-code"></i>Más</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- ***************** MENU INFERIOR ********************** -->
+        <div class="img">
+            <img src="../imagenes/redes.jpg"  alt="Imagen de Freepik nube" class="nube">
+        </div> 
+         <div id="menum-inferior">
+            <input type="checkbox" id="btn-menu-inferior">
+            <label for="btn-menu-inferior" id="mmovill"><i class="fa-solid fa-ellipsis-vertical"></i></label>  
+            <nav class="menu-inferior">
+                <ul>
+                    <a href="dns.php?<?php echo $_SESSION['token']; ?>">DNS</a>
+                    <a href="dominios.php?<?php echo $_SESSION['token']; ?>">DOMINIOS</a>
+                    <a href="microsoftAzure.php?<?php echo $_SESSION['token']; ?>">MICROSOFT AZURE</a>
+                    <a href="servidores.php?<?php echo $_SESSION['token']; ?>">SERVIDORES</a>
+                    <a href="dhcp.php?<?php echo $_SESSION['token']; ?>">DHCP</a>
+                </ul>
+            </nav>
+         </div>
+    </header>
+<!-- ********************** INDICE******************************************** -->
+<main>
+    <aside id="indice">
+        <h1>INDICE</h1>
+        <ul>
+            <li><a href="dns.php?<?php echo $_SESSION['token']; ?>">DNS</a>
+              <ul>
+                <li><a href="dns.php?<?php echo $_SESSION['token']; ?>">¿Qué es el DNS?</a></li>
+                <li><a href="dns.php?<?php echo $_SESSION['token']; ?>">Historia</a></li>
+              </ul>
+            </li>
+            <li><a href="dominios.php?<?php echo $_SESSION['token']; ?>">DOMINIOS</a>
+                <ul>
+                    <li><a href="dominios.php?<?php echo $_SESSION['token']; ?>">¿Que es un Dominio?</a></li>
+                    <li><a href="dominios.php?<?php echo $_SESSION['token']; ?>">La importancia de Dominios</a></li>
+                </ul>
+            </li>
+            <li><a href="microsoftAzure.php?<?php echo $_SESSION['token']; ?>">MICROSOFT AZURE</a>
+                <ul>
+                    <li><a href="#p-azure">¿Que es Azure?</a></li>
+                    <li><a href="#p-azuretipos">Tipos de Azure</a></li>
+                    <li><a href="#p-azurehistoria">Historia de Azure</a></li>
+                  </ul>
+            </li>
+            <li><a href="servidores.php?<?php echo $_SESSION['token']; ?>">SERVIDORES</a>
+                <ul>
+                    <li><a href="servidores.php?<?php echo $_SESSION['token']; ?>">Informacion servidores</a></li>
+                </ul>
+            </li>
+            <li><a href="dhcp.php?<?php echo $_SESSION['token']; ?>">DHCP</a>
+                <ul>
+                    <li><a href="dhcp.php?<?php echo $_SESSION['token']; ?>">¿Qué es el DHCP?</a></li>
+                    <li><a href="dhcp.php?<?php echo $_SESSION['token']; ?>">¿Cuándo utilizar un DHCP?</a></li>
+                    <li><a href="dhcp.php?<?php echo $_SESSION['token']; ?>">Ventajas y desventajas de utilizar DHCP</a></li>
+                    <li><a href="dhcp.php?<?php echo $_SESSION['token']; ?>">Mecanismos para asignar direcciones IP por DHCP</a></li>
+                  </ul>
+            </li>
+        </ul>
+    </aside>
+<!-- ********************** CONTENIDO MICROSOFT******************************************** -->
+    <aside id="secciones">
+    <section class="azureSec">
+        <section class="microsoft" id="p-microsoft">
+            <h2 id="p-azure">¿Qué es Microsoft Azure?</h2>
+            <p> Microsoft Azure es una plataforma de computación en la nube creado por Microsoft para construir, 
+                probar, desplegar y administrar aplicaciones y servicios mediante el uso de sus centros de datos.<br><br>
+    
+                Azure, al igual que otras plataformas en la nube, se basa en una tecnología conocida como virtualización. 
+                La mayoría del hardware del equipo se puede emular en software. El hardware del equipo es simplemente un 
+                conjunto de instrucciones, que se codifican de forma permanente o semi permanente en silicio. Las capas 
+                de emulación se usan para asignar instrucciones de software a instrucciones de hardware. Las capas de 
+                emulación permiten que se ejecute hardware virtualizado en software como el propio hardware real.<br><br>
+    
+                Básicamente, la nube es un conjunto de servidores físicos que se encuentran en uno o varios centros de datos. 
+                Los centros de datos ejecutan hardware virtualizado para los clientes.<br><br>
+            </p>
+            <h2 id="p-azuretipos">Tipos de Microsoft Azure</h2>
+    
+                <h3 class="h3a" id="p-iaas">AZURE IAAS</h3>
+                <p class="p1">
+                    Azure IaaS (Infrastructure as a Service) es un servicio ofrecido por Microsoft Azure que proporciona infraestructura 
+                    informática virtualizada en la nube. Con Azure IaaS, puedes crear, administrar y controlar servidores virtuales, redes 
+                    y almacenamiento en la nube de Azure.
+                </p>
+    
+                <p class="p2">Puntos claves sobre Azure IAAS</p>
+    
+               <div class="sliderAzure">
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img1.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img2.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img3.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img4.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img5.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img6.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img7.jpg');"></div>
+                </div><br><br> 
+    
+                <h3 class="h3a" id="p-paas">AZURE PAAS</h3>
+                <p class="p1">
+                    Azure PaaS (Platform as a Service) es un servicio proporcionado por Microsoft Azure que ofrece una plataforma completa 
+                    para el desarrollo, implementación y administración de aplicaciones en la nube. Con Azure PaaS, puedes centrarte en la 
+                    creación de aplicaciones sin preocuparte por la infraestructura subyacente.
+                </p>
+    
+                <p class="p2">Puntos claves sobre Azure PAAS</p>
+
+                <div class="sliderAzure">
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img8.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img9.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img10.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img11.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img12.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img13.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img14.jpg');"></div>
+                </div><br><br>
+    
+                <h3 class="h3a" id="p-saas">AZURE SAAS</h3>
+                <p class="p1">
+                    Azure SaaS (Software as a Service) es un modelo de entrega de software en la nube proporcionado por Microsoft Azure. 
+                    En este modelo, el proveedor de servicios en la nube ofrece aplicaciones de software completas y listas para usar a 
+                    través de internet, eliminando la necesidad de instalar y mantener el software localmente.
+                </p>
+    
+                <p class="p2">Puntos claves sobre Azure SAAS</p>
+    
+              <div class="sliderAzure">
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img15.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img16.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img17.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img18.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img19.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img20.jpg');"></div>
+                    <div style="background-image: url('../imagenes/MicrosoftAzure/img21.jpg');"></div>
+                </div>
+               
+            <h2 id="p-azurehistoria">Historia de Microsoft Azure</h2>
+            <p>Microsoft dio a conocer por primera vez sus planes para introducir un servicio de computación en la nube llamado Windows 
+                Azure en 2008. Las versiones preliminares del servicio estuvieron disponibles y se desarrollaron, lo que llevó a su lanzamiento 
+                comercial a principios de 2010. Aunque las primeras iteraciones de los servicios en la nube de Azure se quedaron atrás de las 
+                ofertas más establecidas —como AWS— la cartera siguió evolucionando y admitiendo una base más amplia de lenguajes de programación, 
+                marcos y sistemas operativos. A principios de 2014, Microsoft reconoció que las implicaciones de la computación en la nube se 
+                extendían mucho más allá de Windows, y el servicio fue rebautizado como Microsoft Azure.<br><br>
+    
+                Windows Azure nace como PaaS. Es decir, como plataforma como servicio. Se encarga este área de la gestión de servidores
+                y alojamiento, por ejemplo, de sitios. En 2008, Microsoft presentaba Windows Azure, introduciéndose así en un mercado que 
+                ha evolucionado exponencialmente y que prometer seguir sorprendiendo. Para empezar a explicar qué es esto del cloud computing, 
+                vamos a dar una definición a este servicio.  Se trata de un paradigma que ofrece servicios a través de una red. Centrándonos en
+                Microsoft, Windows Azure nace como una capa en la nube que funciona sobre sistemas que utilizan Windows Server.<br><br>
+    
+                Con los años ha ido incorporando mejoras y en 2010 se presenta Microsoft Azure. Las posibilidades que ofrece están en alza. 
+                Suponen para las empresas un nuevo espacio donde desarrollar su software ahorrando los costes que conlleva el mantenimiento 
+                del hardware. Y es que en Microsoft Azure el pago se realiza por uso.La nube ofrece también unas garantías de seguridad muy 
+                superiores a las de los servidores propios. Así como la realización de backups continuos que aseguran la recuperación de los 
+                datos ante cualquier imprevisto.<br><br>
+    
+                <div class="imgHistoria">
+                    <img class="imgA" src="../imagenes/MicrosoftAzure/Azure1.jpg" alt="histora microsoft Azure">
+                    <img class="imgB" src="../imagenes/MicrosoftAzure/azure2.jpg" alt="histora microsoft Azure">
+                </div><br><br>
+            </p>
+        </section>
+    </section>
+    <!-- ********************** CONTENDIDO SIMILAR******************************************** -->
+    <section class="mas" id="p-mas">
+        <h2>CONTENIDO SIMILAR</h2>
+        <div class="p-mas">
+            <aside id="cuad1">
+                <h2>¿Qué son los DNS?</h2>
+              <div class="img">
+                <img src="../imagenes/mas/img1.jpg" alt="que son los DNS">
+              </div>
+            <a href="dns.php?<?php echo $_SESSION['token']; ?>">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </aside>
+            <aside id="cuad2">
+                <h2>¿Qué son los dominios?</h2>
+              <div class="img">
+                <img src="../imagenes/mas/img2.jpg" alt="que son los dominios">
+              </div>
+            <a href="dominios.php?<?php echo $_SESSION['token']; ?>">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </aside>
+            <aside id="cuad4">
+                <h2>Tipos de servidores</h2>
+                <div class="img">
+                    <img src="../imagenes/mas/img5.jpg" alt="tipos de servidores">
+                </div>
+                <a href="servidores.php?<?php echo $_SESSION['token']; ?>">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+            </aside>
+            <aside id="cuad5">
+                <h2>¿Qué es DHCP?</h2>
+                <div class="img">
+                    <img src="../imagenes/mas/img3.jpg" alt="que es DHCP">
+                </div>
+                <a href="dhcp.php?<?php echo $_SESSION['token']; ?>">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>   
+             </aside>
+        </div>
+    </section>
+</aside>
+ </main>
+    <!-- ********************** FOOTER******************************************** --> 
+    <footer id="piepagina">
+        <h3>InfoDigital | 2023</h3>
+        <!-- <div class="cajapie">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+        </div> -->
+    </footer>
+  </body>
+</html>

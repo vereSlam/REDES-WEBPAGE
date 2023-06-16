@@ -1,0 +1,136 @@
+<?php
+session_start();
+$hora = date('H:i');
+$session_id = session_id();
+$token = hash('sha256', $hora.$session_id);
+ 
+$_SESSION['token'] = $token;
+ 
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="info Digital" href="../logo/logo.png">
+    <link rel="stylesheet" href="../estilos/estiloMas.css">
+    <title>InfoDigital</title>
+    <link rel="stylesheet" href="../estilos/mediaMas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   
+    <!-- ********************** CABECERA DE LA WEB ******************************************** -->
+    <header id="cajacabecera">
+         <!-- ***************** MENU SUPERIOR ********************** -->
+        <div id="cabecera">
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu" id="mmovil"><i class="fa-sharp fa-solid fa-list-ul"></i></label>  
+            <nav class="menu">
+                <ul>
+                    <li><a href="../index.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
+                    <li><a href="sobreNosotros.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-calendar-days"></i>Sobre Nosotros</a></li>
+                    <li><a href="contactenos.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-user"></i></i>Contactenos</a></li>
+                    <li><a href="#p-mas"><i class="fa-solid fa-laptop-code"></i>Más</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- ********************** INICIO******************************************** -->
+<main>
+    <section class="psecciones">
+        <aside id="cuad1">
+            <h2>DNS</h2>
+                <br>
+             <div class="txt">
+                <div class="img">
+                    <img src="../imagenes/mas/img1.jpg" alt="imagen dns">
+                </div>
+                <p>
+                    El Sistema de Nombres de Dominio o por sus siglas en inglés DNS (Domain Name System) tiene como función
+                    principal el de relacionar dos datos: Nombres de dominios y direcciones IP, es decir, el DNS tiene como 
+                    entrada un... 
+                </p>
+                <a href="dns.php?<?php echo $_SESSION['token']; ?>">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+                <h4>Publicado Mayo 05, 2023</h4>
+             </div>
+        </aside>
+        <aside id="cuad2">
+                <h2>DOMINIOS</h2>
+                <br>
+            <div class="txt">
+                <div class="img">
+                    <img src="../imagenes/mas/img2.jpg" alt="imagen dominio">
+                </div>
+                <p>
+                    Un dominio es un nombre único e inequívoco a nivel mundial para una región de Internet delimitada de forma lógica como,
+                     por ejemplo, una página web. Los usuarios de Internet ven los dominios de la siguiente forma...
+                </p>
+                <a href="dominios.php?<?php echo $_SESSION['token']; ?>">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+                <h4>Publicado Mayo 05, 2023</h4>    
+            </div>
+        </aside>
+        <aside id="cuad3">
+                <h2>MICROSOFT AZURE</h2>
+                <br>
+            <div class="txt">
+                <div class="img">
+                    <img src="../imagenes/mas/img4.jpg" alt="microsoft Azure">
+                </div>
+                <p>
+                    Microsoft Azure es una plataforma de computación en la nube creado por Microsoft para construir, 
+                probar, desplegar y administrar aplicaciones y servicios mediante el uso de sus centros de datos...
+                </p>
+                <a href="microsoftAzure.php?<?php echo $_SESSION['token']; ?>">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+                <h4>Publicado Mayo 05, 2023</h4>    
+            </div>
+        </aside>
+        <aside id="cuad4">
+                <h2>SERVIDORES</h2>
+                <br>
+            <div class="txt">
+                <div class="img">
+                    <img src="../imagenes/mas/img5.jpg" alt="imagen servidor">
+                </div>
+                <p>
+                    Un servidor es un conjunto de computadoras capaces de atender las peticiones de un cliente y devolverle
+                    una respuesta en concordancia. Los servidores se pueden ejecutar en cualquier tipo de computadora...
+                </p>
+                <a href="servidores.php?<?php echo $_SESSION['token']; ?>">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+                <h4>Publicado Mayo 05, 2023</h4>    
+            </div>
+        </aside>
+        <aside id="cuad5">
+                <h2>DHCP</h2>
+                <br>
+            <div class="txt">
+                <div class="img">
+                    <img src="../imagenes/mas/img3.jpg" alt="imagen dhcp">
+                </div>
+                <p>
+                    El protocolo DHCP (Dynamic Host Configuration Protocol) es un protocolo de red que utiliza 
+                    una arquitectura cliente-servidor. Por lo tanto, se tendrá uno o varios protocolos DHCP al 
+                    igual que uno o varios clientes..
+                </p>
+                <a href="dhcp.php?<?php echo $_SESSION['token']; ?>">Leer más <i class="fa-solid fa-arrow-right-long"></i></a>
+                <h4>Publicado Mayo 05, 2023</h4>    
+            </div>
+        </aside>
+    </section>
+ </main>
+    <!-- ********************** FOOTER******************************************** --> 
+    <footer id="piepagina">
+        <h3>InfoDigital | 2023</h3>
+        <!-- <div class="cajapie">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+        </div> -->
+    </footer>
+    <script src="../main.js"></script>
+  </body>
+</html>

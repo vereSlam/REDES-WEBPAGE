@@ -1,3 +1,12 @@
+<?php
+session_start();
+$hora = date('H:i');
+$session_id = session_id();
+$token = hash('sha256', $hora.$session_id);
+ 
+$_SESSION['token'] = $token;
+ 
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,9 +29,10 @@
             <label for="btn-menu" id="mmovil"><i class="fa-sharp fa-solid fa-list-ul"></i></label>  
             <nav class="menu">
                 <ul>
-                    <li><a href="/index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
-                    <li><a href="paginas/sobreNosotros.html"><i class="fa-solid fa-calendar-days"></i>Sobre Nosotros</a></li>
-                    <li><a href="paginas/mas.html"><i class="fa-solid fa-laptop-code"></i>Más</a></li>
+                    <li><a href="index.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
+                    <li><a href="paginas/sobreNosotros.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-calendar-days"></i>Sobre Nosotros</a></li>
+                    <li><a href="paginas/contactenos.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-user"></i></i>Contactenos</a></li>
+                    <li><a href="paginas/mas.php?<?php echo $_SESSION['token']; ?>"><i class="fa-solid fa-laptop-code"></i>Más</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,11 +57,11 @@
             <label for="btn-menu-inferior" id="mmovill"><i class="fa-solid fa-ellipsis-vertical"></i></label>  
             <nav class="menu-inferior">
                 <ul>
-                    <a class="active" href="paginas/dns.html">DNS</a>
-                    <a href="paginas/dominios.html">DOMINIOS</a>
-                    <a href="paginas/microsoftAzure.html">MICROSOFT AZURE</a>
-                    <a href="paginas/servidores.html">SERVIDORES</a>
-                    <a href="paginas/dhcp.html">DHCP</a>
+                    <a class="active" href="paginas/dns.php?<?php echo $_SESSION['token']; ?>">DNS</a>
+                    <a href="paginas/dominios.php?<?php echo $_SESSION['token']; ?>">DOMINIOS</a>
+                    <a href="paginas/microsoftAzure.php?<?php echo $_SESSION['token']; ?>">MICROSOFT AZURE</a>
+                    <a href="paginas/servidores.php?<?php echo $_SESSION['token']; ?>">SERVIDORES</a>
+                    <a href="paginas/dhcp.php?<?php echo $_SESSION['token']; ?>">DHCP</a>
                 </ul>
             </nav>
          </div>
@@ -67,7 +77,7 @@
                 <p>
                     El Sistema de Nombres de Dominio o por sus siglas en inglés DNS (Domain Name System) tiene como función
                     principal el de relacionar dos datos: Nombres de dominios y direcciones IP, es decir, el DNS tiene como 
-                    entrada un nombre de dominio (URL) que se... <a href="paginas/dns.html">Leer más</a>
+                    entrada un nombre de dominio (URL) que se... <a href="paginas/dns.php?<?php echo $_SESSION['token']; ?>">Leer más</a>
                 </p>
              </div>
                <h4>Publicado Mayo 05, 2023</h4>
@@ -78,7 +88,7 @@
             <div class="txt">
                 <p>
                     Un dominio es un nombre único e inequívoco a nivel mundial para una región de Internet delimitada de forma lógica como,
-                    por ejemplo, una página web. Los usuarios de Internet ven los dominios de la siguiente forma... <a href="paginas/dominios.html">Leer más</a>
+                    por ejemplo, una página web. Los usuarios de Internet ven los dominios de la siguiente forma... <a href="paginas/dominios.php?<?php echo $_SESSION['token']; ?>">Leer más</a>
                 </p>
             </div>
             <h4>Publicado Mayo 05, 2023</h4>
@@ -89,7 +99,7 @@
             <div class="txt">
                 <p>
                     Microsoft Azure es una plataforma de computación en la nube creado por Microsoft para construir, 
-                    probar, desplegar y administrar aplicaciones y servicios mediante el uso de sus centros de datos... <a href="paginas/microsoftAzure.html">Leer más</a>
+                    probar, desplegar y administrar aplicaciones y servicios mediante el uso de sus centros de datos... <a href="paginas/microsoftAzure.php?<?php echo $_SESSION['token']; ?>">Leer más</a>
                 </p>
             </div>
             <h4>Publicado Mayo 05, 2023</h4>
@@ -101,7 +111,7 @@
                 <p>
                     Un servidor es un conjunto de computadoras capaces de atender las peticiones de un cliente y devolverle
                     una respuesta en concordancia. Los servidores se pueden ejecutar en cualquier tipo de computadora...
-                    <a href="paginas/microsoftAzure.html">Leer más</a>
+                    <a href="paginas/microsoftAzure.php?<?php echo $_SESSION['token']; ?>">Leer más</a>
                 </p>
             </div>
             <h4>Publicado Mayo 05, 2023</h4>
@@ -113,7 +123,7 @@
                 <p>
                     El protocolo DHCP (Dynamic Host Configuration Protocol) es un protocolo de red que utiliza 
                     una arquitectura cliente-servidor. Por lo tanto, se tendrá uno o varios protocolos DHCP al 
-                    igual que uno o varios clientes.. <a href="paginas/microsoftAzure.html">Leer más</a>
+                    igual que uno o varios clientes.. <a href="paginas/microsoftAzure.php?<?php echo $_SESSION['token']; ?>">Leer más</a>
                 </p>
             </div>
             <h4>Publicado Mayo 05, 2023</h4>
